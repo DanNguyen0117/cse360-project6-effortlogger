@@ -35,7 +35,9 @@ public class FirstRoundPlanningPoker {
 	
 	String[] projects = {"Project 1", "Project 2"};
 	String currentItem;
-	
+
+	//CHANGE THIS
+	// this is hardcoded data, replace with function to call actual data or make it automatic
 	public void importPreviousProjects() {
 		if(!didInit) {
 			//initialize
@@ -87,7 +89,10 @@ public class FirstRoundPlanningPoker {
 			System.out.println("removed: " + selectedID);
 		}
 	}
-	
+
+	//CHANGE!
+	// current story point calculations just assume each item is 10 points
+	// change so that it calculates based on each item's own points
 	public void generateStoryPoints() {
 		int totalPoints = 0;
 		if(historicalItemList.getItems().isEmpty()) {
@@ -98,7 +103,9 @@ public class FirstRoundPlanningPoker {
 			storyPoints.setText(Integer.toString(totalPoints));
 		}
 	}
-	
+
+	//CHANGE!
+	// add functionality so that next button goes to next window for the next planning poker rounds
 	public void nextRoundBtnPushed() {
 		System.out.println("Next Round! Current Story Points: " + storyPoints.getText());
 	}
